@@ -104,7 +104,7 @@ class MazeModel {
   }
 
   createMap() {
-    this.map = this.testMap();
+    this.map = (new Maze(10, 10)).matrix;
   }
 
   testMap() {
