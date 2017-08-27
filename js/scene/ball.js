@@ -1,11 +1,11 @@
-class Ball {
-  constructor() {
+class BallModel {
+  constructor(radius) {
     //https://threejs.org/docs/#api/geometries/SphereGeometry
 
     // create the geometry (shape) of the cylinder;
     // the parameters are:
     // radius top, radius bottom, height, number of segments on the radius, number of segments vertically
-    const geometry = new THREE.SphereGeometry(10, 32, 32);
+    const geometry = new THREE.SphereGeometry(radius, 32, 32);
 
     // rotate the geometry on the x axis
     //geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));

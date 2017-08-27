@@ -5,8 +5,9 @@ class Scene {
     // add the lights
     this.light = new Light();
     // add the objects
-    this.ball = new Ball();
-    this.plane = new Plane();
+    this.scale = 14;
+    this.maze = new MazeModel(this.scale);
+    this.ball = new BallModel(this.scale/4);
   }
 
   render() {
@@ -22,7 +23,7 @@ class Scene {
       this.world.scene.add(this.light.spotLight);
 
       // add the mesh of the sea to the scene
-      this.world.scene.add(this.plane.mesh);
+      this.world.scene.add(this.maze.mesh);
       this.world.scene.add(this.ball.mesh);
 
 
