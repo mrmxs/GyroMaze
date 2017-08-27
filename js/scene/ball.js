@@ -27,7 +27,8 @@ class BallModel {
     this.mesh.castShadow = true;
 
     // push it a little bit at the bottom of the scene
-    this.mesh.position.y = 110;
+    this.mesh.position.y = 100;
+    this.mesh.position.z = 10;
   }
 
 }

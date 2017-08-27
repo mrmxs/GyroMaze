@@ -101,8 +101,6 @@ class MazeModel {
     this.mesh.position.y = 100;
     this.mesh.position.x = 0;
     this.mesh.position.z = 0;
-    //https://threejs.org/docs/#manual/introduction/Matrix-transformations
-    this.mesh.rotation.x = -Math.PI/6;
   }
 
   createMap() {

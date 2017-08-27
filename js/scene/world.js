@@ -11,7 +11,7 @@ class World {
 
     // Add a fog effect to the scene; same color as the
     // background color used in the style sheet
-    this.scene.fog = new THREE.Fog(COLORS.choco, 100, 180);
+    this.scene.fog = new THREE.Fog(COLORS.choco, 100, 150);
 
     // Create the camera
     const aspectRatio = this.WIDTH / this.HEIGHT,
@@ -27,8 +27,10 @@ class World {
 
     // Set the position of the camera
     this.camera.position.x = 0;
-    this.camera.position.z = 120;
-    this.camera.position.y = 100;
+    this.camera.position.z = 100;
+    this.camera.position.y = 50;
+    //https://threejs.org/docs/#manual/introduction/Matrix-transformations
+    this.camera.rotation.x = Math.PI/6;
 
     // Create the renderer
     this.renderer = new THREE.WebGLRenderer({

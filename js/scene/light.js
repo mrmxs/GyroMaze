@@ -33,7 +33,7 @@ class Light {
 
     // spot light
     this.spotLight = new THREE.SpotLight( 0xffffff, .9 );
-    this.spotLight.position.set( 0, 300, 200 );
+    this.spotLight.position.set( 30, 110, 90 );
     this.spotLight.shadow.mapSize.width = 2048;
     this.spotLight.shadow.mapSize.height = 2048;
     this.spotLight.castShadow = true;
