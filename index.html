@@ -2,19 +2,35 @@
   <head>
     <meta charset="utf-8">
     <title>☺/☻</title>
-    <script src="js/settings.js"></script>
-    <script src="js/ellersAlgorithm.js"></script>
-    <script src="js/cell.js"></script>
-    <script src="js/maze.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/ellersAlgorithm.js"></script>
+    <script type="text/javascript" src="js/cell.js"></script>
+    <script type="text/javascript" src="js/maze.js"></script>
+
+    <!--<script type="text/javascript" src="js/three.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.min.js"></script>
+    <script type="text/javascript" src="js/scene/colors.js"></script>
+    <script type="text/javascript" src="js/scene/world.js"></script>
+    <script type="text/javascript" src="js/scene/light.js"></script>
+    <script type="text/javascript" src="js/scene/plane.js"></script>
+    <script type="text/javascript" src="js/scene/maze.js"></script>
+    <script type="text/javascript" src="js/scene/ball.js"></script>
+    <script type="text/javascript" src="js/scene/scene.js"></script>
     <script>
       window.onload = () => {
-        const maze = new Maze(10, 10);
+        const scene = new Scene();
 
-        document.getElementById("maze").innerHTML = maze.stringify2();
+        scene.render();
       };
     </script>
+    <style>
+      body {
+        background-color: #421b1a;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <pre id="maze"></pre>
+    <div id="world"></div>
   </body>
 </html>
