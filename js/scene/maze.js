@@ -31,7 +31,7 @@ class MazeModel {
                 -scale*(i + 0.5) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -49,7 +49,7 @@ class MazeModel {
                 -scale*i + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -69,7 +69,7 @@ class MazeModel {
                 -scale*(i + 0.5) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -87,7 +87,7 @@ class MazeModel {
                 -scale*(i + 1) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 

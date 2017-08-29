@@ -39,6 +39,7 @@ class Scene {
          this.maze.mesh.rotation.y = data.dm.gx/8;
         // z axis not intresting
 
+        this.world.scene.simulate();
         this.world.renderer.render(this.world.scene, this.world.camera);
       }.bind(this));
     }).catch(e => {

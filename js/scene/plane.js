@@ -8,7 +8,7 @@ class Plane {
       side: THREE.FrontSide,
     });
 
-    this.mesh = new THREE.Mesh(geometry, material);
+    this.mesh = new Physijs.BoxMesh(geometry, material);
     this.mesh.receiveShadow = true;
     this.mesh.castShadow = true;
   }

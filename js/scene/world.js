@@ -3,7 +3,8 @@ class World {
     this.HEIGHT = window.innerHeight;
     this.WIDTH = window.innerWidth;
 
-    this.scene = new THREE.Scene();
+    this.scene = new Physijs.Scene();
+    this.scene.setGravity(new THREE.Vector3(0, 0, -10));
     this.scene.fog = new THREE.Fog(COLORS.choco, 100, 150);
 
     const aspectRatio = this.WIDTH / this.HEIGHT,

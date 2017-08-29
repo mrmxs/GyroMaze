@@ -10,7 +10,7 @@ class BallModel {
         //shading:THREE.FlatShading,
     });
 
-    this.mesh = new THREE.Mesh(geometry, material);
+    this.mesh = new Physijs.SphereMesh(geometry, material);
     this.mesh.position.z = 10;
     this.mesh.receiveShadow = true;
     this.mesh.castShadow = true;
