@@ -1,13 +1,18 @@
 class Scene {
   constructor() {
     this.scale = 14;
-    const x = 8,
-          y = 6;
+    this.x = 8;
+    this.y = 6;
 
     this.world = new World();
     this.light = new Light();
     this.ball = new BallModel(this.scale/4);
-    this.maze = new MazeModel(x, y, this.scale);
+    this.ball.mesh.position.set(
+      (1 - this.y)*this.scale/2,
+      - (1 - this.x)*this.scale/2,
+       10
+    );
+    this.maze = new MazeModel(this.x, this.y, this.scale);
     this.maze.mesh.add(this.world.camera);
   }
 
