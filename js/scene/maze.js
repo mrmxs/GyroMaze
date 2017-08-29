@@ -1,10 +1,8 @@
 class MazeModel {
-  constructor(scale) {
-    this.createMap();
+  constructor(x, y, scale) {
+    this.createMap(x, y);
 
-    const x = this.map.length,
-          y = this.map[0].length,
-          mazeSizeX = y*scale, // transposed matrix
+    const mazeSizeX = y*scale, // transposed matrix
           mazeSizeY = x*scale;
 
     this.plane = new Plane(mazeSizeX, mazeSizeY);
@@ -33,7 +31,7 @@ class MazeModel {
                 -scale*(i + 0.5) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -51,7 +49,7 @@ class MazeModel {
                 -scale*i + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -71,7 +69,7 @@ class MazeModel {
                 -scale*(i + 0.5) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -89,7 +87,7 @@ class MazeModel {
                 -scale*(i + 1) + mazeSizeY/2,
                 0 )));
 
-          const mesh = new THREE.Mesh( geometry, this.hMaterial);
+          const mesh = new Physijs.BoxMesh( geometry, this.hMaterial);
           mesh.receiveShadow = true;
           mesh.castShadow = true;
 
@@ -97,14 +95,10 @@ class MazeModel {
         }
       }
     }
-
-    this.mesh.position.y = 100;
-    this.mesh.position.x = 0;
-    this.mesh.position.z = 0;
   }
 
-  createMap() {
-    this.map = (new Maze(10, 10)).matrix;
+  createMap(x, y) {
+    this.map = (new Maze(x, y)).matrix;
   }
 
   testMap() {
