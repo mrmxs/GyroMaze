@@ -18,7 +18,7 @@ class World {
         );
     this.camera.position.x = 0;
     this.camera.position.z = 100;
-    this.camera.position.y = 100;
+    this.camera.position.y = 0;
     //https://threejs.org/docs/#manual/introduction/Matrix-transformations
     //this.camera.rotation.x = Math.PI/6;
 

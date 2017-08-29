@@ -1,13 +1,14 @@
 class Scene {
   constructor() {
-    // set up the scene, the camera and the renderer
-    this.world = new World();
-    // add the lights
-    this.light = new Light();
-    // add the objects
     this.scale = 14;
-    this.maze = new MazeModel(this.scale);
+    const x = 8,
+          y = 6;
+
+    this.world = new World();
+    this.light = new Light();
     this.ball = new BallModel(this.scale/4);
+    this.maze = new MazeModel(x, y, this.scale);
+    this.maze.mesh.add(this.world.camera);
   }
 
   render() {

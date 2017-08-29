@@ -11,9 +11,7 @@ class BallModel {
     });
 
     this.mesh = new THREE.Mesh(geometry, material);
-    this.mesh.position.y = 100;
     this.mesh.position.z = 10;
-
     this.mesh.receiveShadow = true;
     this.mesh.castShadow = true;
   }
